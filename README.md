@@ -1,16 +1,69 @@
-# frontend
+#  **Task Management App – Flutter**
 
-A new Flutter project.
+A lightweight **task management application** built with **Flutter**, supporting **offline-first functionality** with seamless online sync.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+* **Create tasks offline**
+* **Automatic sync** when the device reconnects
+* **Organized task lists** with local caching
+* Smooth and responsive UI
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Tech Stack
+
+### **Frontend (Flutter)**
+
+* **BLoC Architecture** → predictable state management
+* **sqflite** → offline local storage
+* **http** → API calling & synchronization 
+* **Flutter Widgets + Material UI** for clean UI design
+
+---
+
+## Offline–First Workflow
+
+1. Tasks created offline are saved locally using **sqflite**
+2. When the device comes online, pending tasks sync automatically to the backend
+3. Data remains consistent across local + server
+
+---
+
+## Folder Structure
+
+```
+lib/
+ ├─ main.dart
+ ├─ core/
+    ├─ constants
+    ├─ shared_pref_service.dart
+ ├─ models/
+ ├─ features/
+    ├─ auth/
+    |  ├─ bloc/
+    |  ├─ presentation/
+    |  ├─ widgets/
+    |  ├─ reposiories/
+    ├─ home/
+       ├─ bloc/
+       ├─ presentation/
+       ├─ widgets/
+       ├─ reposiories/
+ 
+```
+
+---
+
+
+
+## Backend - https://github.com/AtharvSutar05/task-management-backend
+
+### Tech Stack
+- **TypeScript (Node.js + Express)**
+- **PostgreSQL for scalable and relational data storage**
+- **Drizzle ORM + Drizzle-Kit for schema management**
+
+
